@@ -1,0 +1,58 @@
+
+.button2 {
+    background-color: #FFA7EC;
+    border: none;
+    color: black;
+    padding: 10px 10px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    transition-duration: 0.4s;
+    border-radius: 30px;
+  }
+  
+ .button2:hover {
+    background-color: hotpink;
+    color: white;
+  }
+ 
+ .button2:active {
+   background-color: purple;
+ }
+
+ .list {
+    list-style-type: none;
+
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+ .ss {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(33.33% - 10px);
+ }
+
+ #first1 {
+    width: 200 px;
+    height: 120px;
+    background-color: white;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 25px;
+  
+   }
+
+#second1 {
+    width: 100 px;
+    float: flex;
+    height: 230px;
+    background-color: white;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 25px;
+  
+   }
