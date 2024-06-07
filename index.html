@@ -1,13 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>YOUR PAGE WORKS</h1>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Girls Who Trade</title>
+    <link rel="stylesheet" href="styling.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>   
+      <a href="/pages/index1.html">
+        <h1>Girls Who Trade</h1>
+    </a>
+        <div class="search">
+          <input type="text" placeholder="Search..">
+         </div>
+        <nav>
+          <a href="/pages/lessons.html" style="cursor:pointer">Lessons</a>
+           <a href="/pages/investing.html" style="cursor:pointer">Investing</a>
+           <a href="#" style="cursor:pointer">Notification</a>
+           <a href="/pages/account.html" style="cursor:pointer">Account</a>
+        </nav>
+      </header>
     
-</body>
+    <div id="container">
+        <div id="first">
+            <h2>Next Lesson</h2>
+              <p>What is a call option? And how to do it.</p>
+              <button class="button" onclick="window.location.href='/pages/lessons.html'">Start</button>
+          </div>
+          <div id="second">
+                <h2>Current Time</h2>
+                  <p>5:32 PM PST</p>
+                  <p>Stock market is</p>
+                <!-- TODO: Closed or open? -->
+           </div>
+  
+          <div id="first">
+             <h2>Market Open</h2>
+                <p>6:30 AM PST</p>
+                <p>Opens in</p>
+                <!-- TODO: How many hours? -->
+          </div>
+    </div>
+
+    <div id="container">
+        <div id="portfolio">
+            <h2>Your Portfolio</h2>
+            <!-- TODO: draw graph and show image -->
+            <div id="myChart" style="width:100%; max-width:600px; height:300px;"></div>
+            <script>
+              google.charts.load('current',{packages:['corechart']});
+              google.charts.setOnLoadCallback(drawChart);
+              
+              function drawChart() {
+              
+              // Set Data
+              const data = google.visualization.arrayToDataTable([
+                ['Day', 'Value'],
+                ['1', 1020],
+                ['2', 2000],
+                ['3', 3000],
+                ['4', 2600],
+                ['5', 3000],
+                ['6', 2600],
+                ['7', 3200],
+              ]);
+              
+              // Set Options
+              const options = {
+                legend: 'none',
+                curveType: 'function',
+              };
+              
+              // Draw
+              const chart = new google.visualization.LineChart(document.getElementById('myChart'));
+              chart.draw(data, options);
+              
+              }
+              </script>
+            
+            <div>
+                <label>
+                    <input type="radio" name="option" 
+                           value="one-day"> 1D
+                </label>
+            
+                <label>
+                    <input type="radio" name="option" 
+                           value="one-week"> 1W
+                </label>
+            
+                <label>
+                    <input type="radio" name="option" 
+                           value="one-month"> 1M
+                </label>
+                <label>
+                    <input type="radio" name="option" 
+                           value="three-months"> 3M
+                </label>
+                <label>
+                    <input type="radio" name="option" 
+                           value="six-months3"> 6M
+                </label>
+                <label>
+                    <input type="radio" name="option" 
+                           value="one-year"> 1Y
+                </label>
+                <label>
+                    <input type="radio" name="option" 
+                           value="all"> All
+                </label>
+            </div>
+
+          </div>
+
+     <div id="third">
+        <h2>Judge-free News</h2>
+          <p>Girl talk, Girl Math</p>
+          <p>Latest news impacting stocks</p>
+          <button class="button">Read</button>
+        <!-- TODO: Closed or open? -->
+   </div>
+
+  <div id="third">
+     <h2>Account Setup</h2>
+        <label class="contain">
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+            Profile Picture
+        </label>
+        <label class="contain">
+            <input type="checkbox" checked="unchecked">
+            <span class="checkmark"></span>
+            Username
+        </label>
+        <label class="contain">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Bio
+        </label>
+        <label class="contain">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Investing goals
+        </label>
+        <!-- TODO: How many hours? -->
+            </div>
+        </div>
+    </div>
+
+  </body>
 </html>
